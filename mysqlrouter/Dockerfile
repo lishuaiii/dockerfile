@@ -1,6 +1,6 @@
 FROM ubuntu
 RUN apt update \
-    && apt install mysqlrouter -y \
+    && apt install mysql-router -y \
     && echo "[routing:basic_failover]" >> /etc/mysqlrouter.conf \
     && echo "bind_address=0.0.0.0" >> /etc/mysqlrouter.conf \
     && echo "mode=read-write" >> /etc/mysqlrouter.conf \
